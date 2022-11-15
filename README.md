@@ -1,7 +1,7 @@
 # KoDiffCSE
 Difference-based Contrastive Learning for Korean Sentence Embeddings <br>
    - [DiffCSE-[NAACL 2022]](https://arxiv.org/abs/2204.10298) <br>
-   - [[Github]](https://github.com/voidism/DiffCSE) Official implementation of DiffCSE. <br>
+   - [[Github]](https://github.com/voidism/DiffCSE) Official implementation of DiffCSE <br>
 <img src=https://user-images.githubusercontent.com/55969260/201829550-9674a3ac-cb9b-4e17-b777-7d96fdf5c633.png>
 
 ## Setups
