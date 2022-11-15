@@ -8,10 +8,6 @@ Difference-based Contrastive Learning for Korean Sentence Embeddings <br>
 [![Python](https://img.shields.io/badge/python-3.8.5-blue?logo=python&logoColor=FED643)](https://www.python.org/downloads/release/python-385/)
 [![Pytorch](https://img.shields.io/badge/pytorch-1.7.1-red?logo=pytorch)](https://pytorch.org/get-started/previous-versions/)
 
-## Datasets
-- [wiki-corpus](https://github.com/jeongukjae/korean-wikipedia-corpus) (Unsupervised Training)
-- [KorSTS](https://github.com/kakaobrain/KorNLUDatasets) (Validation & Testing)
-
 ## Encoder Models
 Baseline encoders used for korean sentence embedding - [KLUE-PLMs](https://github.com/KLUE-benchmark/KLUE/blob/main/README.md)
 
@@ -22,6 +18,10 @@ Baseline encoders used for korean sentence embedding - [KLUE-PLMs](https://githu
 
 > **Warning** <br>
 > Large pre-trained models need a lot of GPU memory to train
+
+## Datasets
+- [wiki-corpus](https://github.com/jeongukjae/korean-wikipedia-corpus) (Unsupervised Training)
+- [KorSTS](https://github.com/kakaobrain/KorNLUDatasets) (Validation & Testing)
 
 ## Training - unsupervised 
 ```
