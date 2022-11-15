@@ -65,7 +65,7 @@ python main.py \
     --path_to_saved_model output/best_checkpoint.pt
 ```
 
-## Performance-unsupervised
+## Performance - unsupervised
 
 | Model                  | Average | Cosine Pearson | Cosine Spearman | Euclidean Pearson | Euclidean Spearman | Manhattan Pearson | Manhattan Spearman | Dot Pearson | Dot Spearman |
 |------------------------|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
