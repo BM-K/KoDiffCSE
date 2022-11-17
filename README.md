@@ -20,6 +20,7 @@ Baseline encoders used for korean sentence embedding - [KLUE-PLMs](https://githu
 > Large pre-trained models need a lot of GPU memory to train
 
 ## Datasets
+The data must exist in the "--path_to_data" folder
 - [wiki-corpus](https://github.com/jeongukjae/korean-wikipedia-corpus) (Unsupervised Training)
 - [KorSTS](https://github.com/kakaobrain/KorNLUDatasets) (Validation & Testing)
 
