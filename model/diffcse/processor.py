@@ -92,26 +92,11 @@ class Processor():
         accelerator = Accelerator(fp16=True)
 
         loader, tokenizer = get_loader(self.args, self.metric)
-
-        #model = BERT(AutoModel.from_pretrained('BM-K/KoSimCSE-roberta'))#(self.args.model))
         model = DiffCSE(self.args, tokenizer)
         
         if self.args.multi_gpu == 'True':
             model = nn.DataParallel(model, output_device=0)
         model.to(self.args.device)
-        """
-        pretrained_dict = torch.load('9_best_ckpt.pt')#['model']
-        pretrained_dict_copy = {}
-        model_dict = model.state_dict()
-        
-        for k, v in pretrained_dict.items():
-            k = '.'.join(k.split('.')[2:])
-            if k in model_dict:
-                pretrained_dict_copy[k] = v
-        
-        model_dict.update(pretrained_dict_copy)
-        model.load_state_dict(model_dict)
-        """
 
         criterion, optimizer = self.get_object(tokenizer, model)
 
