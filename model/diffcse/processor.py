@@ -155,7 +155,8 @@ class Processor():
                 performance = {'tl': self.model_progress['loss']/self.model_progress['iter'], 'vs': valid_score, 'ep': epoch, 'ea': self.model_progress['electra_acc']/self.model_progress['iter'], 'step': self.model_progress['iter']}
 
                 self.metric.save_model(self.config, performance, self.model_checker)
-
+                self.config['model'].train()
+                
     def valid(self):
         self.config['model'].eval()
         self.dev_progress = self.dev_progress.fromkeys(self.dev_progress, 0)
