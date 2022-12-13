@@ -33,7 +33,7 @@ python main.py \
     --train True \
     --test False \
     --max_len 64 \
-    --batch_size 128 \
+    --batch_size 512 \
     --epochs 1 \
     --eval_steps 125 \
     --lr 0.00005 \
@@ -60,7 +60,7 @@ python main.py \
     --train False \
     --test True \
     --max_len 64 \
-    --batch_size 128 \
+    --batch_size 512 \
     --path_to_data Dataset/ \
     --test_data test_sts.tsv \
     --path_to_saved_model output/best_checkpoint.pt
