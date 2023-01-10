@@ -184,31 +184,9 @@ class Processor():
     def test(self):
         self.config['model'].load_state_dict(torch.load(self.args.path_to_saved_model))
         self.config['model'].eval()
-        #from transformers import AutoModel, AutoTokenizer, RobertaModel
-        #self.config['model'] = RobertaModel.from_pretrained('BM-K/KorSimCSE-roberta')
-        #self.config['tokenizer'] = AutoTokenizer.from_pretrained('BM-K/KorSimCSE-roberta')
-        #self.config['model'].to(self.config['args'].device)
-        #self.config['model'].eval()
 
         self.dev_progress = self.dev_progress.fromkeys(self.dev_progress, 0)
         
-        """
-        MODEL_SAVE_REPO = 'KoSimCSE-roberta'
-        HUGGINGFACE_AUTH_TOKEN = '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' 
-        url = 'https://huggingface.co/BM-K/KoSimCSE-roberta'
-
-        self.config['model'].bert.push_to_hub(MODEL_SAVE_REPO,
-                                  repo_url=url,
-                                  use_temp_dir=False,
-                                  )#use_auth_token=HUGGINGFACE_AUTH_TOKEN)
-
-        self.config['tokenizer'].push_to_hub(MODEL_SAVE_REPO,
-                              repo_url=url,
-                              use_temp_dir=False,
-                              )#use_auth_token=HUGGINGFACE_AUTH_TOKEN)
-        exit()
-        """
-
         score_indicator = {'eval_pearson_cosine': 0,
                            'eval_spearman_cosine': 0,
                            'eval_pearson_manhattan': 0,
