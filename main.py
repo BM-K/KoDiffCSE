@@ -1,4 +1,4 @@
-from model.setting import Setting, Arguments
+from model.setting import Setting
 from model.diffcse.processor import Processor
 
 
