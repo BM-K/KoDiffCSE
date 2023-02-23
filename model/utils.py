@@ -108,7 +108,6 @@ class Metric():
             os.makedirs(config['args'].path_to_save)
         
         pco['early_stop_patient'] += 1
-        #sorted_path = config['args'].path_to_save + "kosimcse-" + config['args'].model.replace("/", "-") + '.pt'
         sorted_path = config['args'].path_to_save + config['args'].ckpt 
         if cp['vs'] > pco['best_valid_score']:
             pco['early_stop_patient'] = 0
