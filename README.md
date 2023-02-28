@@ -5,8 +5,6 @@ Difference-based Contrastive Learning for Korean Sentence Embeddings <br>
 <img src=https://user-images.githubusercontent.com/55969260/201829550-9674a3ac-cb9b-4e17-b777-7d96fdf5c633.png>
 
 ## Quick tour
-> **Note** <br>
-> All the pretrained models are uploaded in Huggingface Model Hub. Check https://huggingface.co/BM-K
 ```python
 import torch
 from transformers import AutoModel, AutoTokenizer
