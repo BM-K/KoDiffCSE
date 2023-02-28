@@ -17,8 +17,8 @@ def cal_score(a, b):
     b_norm = b / b.norm(dim=1)[:, None]
     return torch.mm(a_norm, b_norm.transpose(0, 1)) * 100
 
-model = AutoModel.from_pretrained('BM-K/')
-tokenizer = AutoTokenizer.from_pretrained('BM-K/')
+model = AutoModel.from_pretrained('BM-K/KoDiffCSE-RoBERTa')
+tokenizer = AutoTokenizer.from_pretrained('BM-K/KoDiffCSE-RoBERTa')
 
 sentences = ['치타가 들판을 가로 질러 먹이를 쫓는다.',
              '치타 한 마리가 먹이 뒤에서 달리고 있다.',
