@@ -27,9 +27,9 @@ sentences = ['치타가 들판을 가로 질러 먹이를 쫓는다.',
 inputs = tokenizer(sentences, padding=True, truncation=True, return_tensors="pt")
 embeddings, _ = model(**inputs, return_dict=False)
 
-score01 = cal_score(embeddings[0][0], embeddings[1][0])  # --
+score01 = cal_score(embeddings[0][0], embeddings[1][0])  # 84.56
 # '치타가 들판을 가로 질러 먹이를 쫓는다.' @ '치타 한 마리가 먹이 뒤에서 달리고 있다.'
-score02 = cal_score(embeddings[0][0], embeddings[2][0])  # --
+score02 = cal_score(embeddings[0][0], embeddings[2][0])  # 48.06
 # '치타가 들판을 가로 질러 먹이를 쫓는다.' @ '원숭이 한 마리가 드럼을 연주한다.'
 ```
 
