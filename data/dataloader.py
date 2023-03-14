@@ -142,6 +142,11 @@ class ModelDataLoader(Dataset):
             
             if num_of_false != 0:
                 random_list = torch.FloatTensor([random.randint(1, num_of_false) for _ in range(num_of_mask)])
+                duplicate = random_list.size() != random_list.unique().size()
+                while(duplicate):
+                    random_list = torch.FloatTensor([random.randint(1, num_of_false) for _ in range(num_of_mask)])
+                    duplicate = random_list.size() != random_list.unique().size()
+                    
                 index = torch.arange(num_of_mask)    
                 masking_map[step].index_add_(0, index, random_list)
             else:
