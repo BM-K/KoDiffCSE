@@ -116,18 +116,12 @@ class Metric():
             unwrapped_model = config['accelerator'].unwrap_model(config['model'])
             config['accelerator'].save(unwrapped_model.state_dict(), sorted_path)
 
-            #state = {'model': config['model'].state_dict(),
-            #         'optimizer': config['optimizer'].state_dict()}
-
-            #torch.save(state, sorted_path)
             print(f'\t## SAVE {sorted_path} |'
                   f' valid_score: {cp["vs"]:.4f} |'
                   f' epochs: {cp["ep"]} |'
                   f' electra acc {cp["ea"]:.4f} | '
                   f' steps: {cp["step"]} ##\n')
 
-        # self.draw_graph(cp)
-        # self.performance_check(cp, config)
         if pco['early_stop_patient'] == self.args.patient:
             raise Exception('\n=====Early Stop=====\n')
 
