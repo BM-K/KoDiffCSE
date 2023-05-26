@@ -179,7 +179,6 @@ class DiffCSE(nn.Module):
         
         return embeddings[:, 0]
 
-
 def cl_init(cls, args, config):
     cls.mlp = ProjectionMLP(config)
     cls.generator = AutoModelForMaskedLM.from_pretrained(args.generator_name)
